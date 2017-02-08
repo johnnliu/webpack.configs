@@ -44,8 +44,8 @@ module.exports = {
       //module: true // true // use SourceMaps from loaders 
     })
     */
-		new webpack.optimize.DedupePlugin(),
-		new webpack.optimize.UglifyJsPlugin()
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin()
   ],
   module: {
     loaders: [

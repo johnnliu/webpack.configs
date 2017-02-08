@@ -3,9 +3,9 @@
 let gulp = require("gulp"),
 	gutil = require("gulp-util"),
 	//watch = require("gulp-watch"),
-    eslint = require("gulp-eslint"),
-    webpack = require('webpack'),
-    config = require("./webpack.config.js"),
+	eslint = require("gulp-eslint"),
+	webpack = require('webpack'),
+	config = require("./webpack.config.js"),
 	user = require("./user.js"),
 	//spsave = require("gulp-spsave");
 	robocopy = require("robocopy");

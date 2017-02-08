@@ -2,11 +2,11 @@ var path = require('path');
 //var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var webpack = require('webpack');
 //var HtmlWebpackPlugin = require('html-webpack-plugin');
-var es3ifyPlugin = require('es3ify-webpack-plugin');
- 
+var  es3ifyPlugin  =  require('es3ify-webpack-plugin');
+
 module.exports = {
   cache: true,
-  context: path.join(__dirname, '/angularjs/app/pm'), 
+  context: path.join(__dirname, '/angularjs/app/pm'),
   entry: {
     'app': ['./app.module'],
     'app-pmr': ['pmr/app.module'],
@@ -20,7 +20,7 @@ module.exports = {
     filename: '[name].js'
   },
   resolve: {
-    alias:{ 
+    alias: {
       "pmr": path.join(__dirname, '/angularjs/app/pmr'),
       "pm": path.join(__dirname, '/angularjs/app/pm'),
       "comment": path.join(__dirname, '/angularjs/app/comment'),
@@ -28,8 +28,8 @@ module.exports = {
 
       "app.common": 'pmr/core/core.common.module',
       "dataservice": 'pmr/core/dataservice',
-      "chartservice": 'pmr/core/chartservice', 
-      "sp": 'pmr/core/sp', 
+      "chartservice": 'pmr/core/chartservice',
+      "sp": 'pmr/core/sp',
       "form.core": 'pmr/core/form.core',
       "form.directive": 'pmr/core/form.directive',
       "form.status": 'pmr/core/form.status',
@@ -62,22 +62,22 @@ module.exports = {
       inject: false
     }),
     */
-    //new es3ifyPlugin(),
-		new webpack.optimize.DedupePlugin(),
-		new webpack.optimize.UglifyJsPlugin({
+    //new es3ifyPlugin(),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.UglifyJsPlugin({
       mangle: {
-          // mangle options, if any
+        // mangle options, if any
       },
       mangleProperties: {
         screw_ie8: false,
         //ignore_quoted: true,      // do not mangle quoted properties and object keys
       },
       compress: {
-        screw_ie8: false, 
+        screw_ie8: false,
         //properties: false        // optional: don't convert foo["bar"] to foo.bar
       },
       output: {
-        screw_ie8: false         
+        screw_ie8: false
       }
     })
   ],
